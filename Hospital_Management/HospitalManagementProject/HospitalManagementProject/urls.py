@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path,include
+from django.urls import path, include
 from HospitalManagementProject import views
 
 urlpatterns = [
@@ -29,10 +29,14 @@ urlpatterns = [
     path('login/',views.Login),
     path('account/',views.Account),
     path('employeesrc/', views.Employeesrc),
-    path('salarycal/', views.SalaryCal),
+    path('salary/', views.Salary),
     path('reception/', views.Reception),
     path('appointment/',views.Appointment),
     path('addmissionform/',views.Addmissionform),
     path('discharge/',views.Discharge),
+    path('hospitaladmin/',views.Hospitaladmin),
+    path('temporary/',views.Temporary),
+    path('registration/',views.Registration),
+    path('updateemployee/',views.Updateemployee),
 ]
  

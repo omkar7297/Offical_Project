@@ -34,8 +34,8 @@ def Account(request):
 def Employeesrc(request):
     return render(request, "employeesrc.html", {"curl":curl})
 
-def SalaryCal(request):
-    return render(request, "salarycal.html", {"curl":curl})
+def Salary(request):
+    return render(request, "salary.html", {"curl":curl})
 
 def Reception(request):
         return render(request, "reception.html",{"curl":curl})
@@ -48,3 +48,15 @@ def Addmissionform(request):
 
 def Discharge(request):
     return render(request,"discharge.html",{"curl":curl})
+
+def Hospitaladmin(request):
+    return render(request,"hospitaladmin.html", {'curl':curl})
+
+def Temporary(request):
+    return render(request,"temporary.html",{"curl": curl})
+
+def Registration(request):
+    return render(request,"registration.html",{"curl":curl})
+
+def Updateemployee(request):
+    return render(request, "updateemployee.html",{'curl':curl})
