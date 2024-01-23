@@ -1,0 +1,57 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block Slider %}
+
+<div style="padding-top:200px; margin-left:250px;" class="col-sm-6">
+    <center>
+        <h1 style="padding-bottom:50px; padding-left:70px;">Equipements list</h1>
+        <div style="margin-top:10px; padding-left:19px;" class="row">
+            <div style="padding-top:5px; " class="col-sm-4"><label>Name of Equipement</label></div>
+            <div style="padding-top:5px; " class="col-sm-4"><label>Quality of Equipement</label></div>
+            <div style="padding-top:5px; " class="col-sm-4"><label>Price of Equipement</label></div>
+
+        </div>
+        <div style="margin-top:10px; padding-left:19px;" class="row">
+            <div class="col-sm-4" style="padding-left:28px;"><input type="password" placeholder="Enter Password" name="password" class="form-control input-sm"  ></div>
+            <div class="col-sm-4" style="padding-left:28px;"><input type="password" placeholder="Enter Password" name="password" class="form-control input-sm"  ></div>
+            <div class="col-sm-4" style="padding-left:28px;"><input type="password" placeholder="Enter Password" name="password" class="form-control input-sm"  ></div>
+        </div>
+        <div style="padding-left:100px; padding-bottom:252px;">
+            <button type="submit" class="btn btn-danger btn-sm" ><a>Add</a></button>
+            <button type="submit" class="btn btn-danger btn-sm"><a>Show</a></button>
+        </div>
+    </center>
+</div>  
+
+{% endblock Slider %}
+
+{% block KeyFeatures %}
+{% endblock KeyFeatures %}
+{% block WithMedical %}
+{% endblock WithMedical %}
+{% block ClinicNumber %}
+{% endblock ClinicNumber %}
+{% block Blog %}
+{% endblock Blog %}
+{% block OurTeam  %}
+{% endblock OurTeam %}
+
+ {% block Footer %}
+    {% endblock Footer %}
+
+ {% block lowerFooter %} 
+    <div class="copy" style=" padding-bottom:10px">
+            <div class="container">
+                <a href="https://www.smarteyeapps.com/">2015 &copy; All Rights Reserved | Designed and Developed by Smarteyeapps</a>
+                <span>
+                    <a><i class="fab fa-github"></i></a>
+                    <a><i class="fab fa-google-plus-g"></i></a>
+                    <a><i class="fab fa-pinterest-p"></i></a>
+                    <a><i class="fab fa-twitter"></i></a>
+                    <a><i class="fab fa-facebook-f"></i></a>
+                </span>
+            </div>
+
+    </div>
+ {% endblock lowerFooter %}

@@ -53,19 +53,13 @@
                     <div id="menu" class="col-lg-8   col-md-9 d-none d-md-block nav-item" style="padding: 0px; margin:0px">
                         <ul>
                             <li style="padding-left:10px"><a href="{{curl}}">Home</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}about_us/">About Us</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}services/">Services</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}blog/">Blog</a></li>  
-                            <li style="padding-left:10px"><a href="{{curl}}gallary/">Gallary</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}contact/">Contact Us</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}login/">Employee Login</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}account/">Account</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}reception/">Reception</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}hospitaladmin/">Hospitaladmin</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
-                        <button class="btn btn-info" href={% static '' %}>Main Page</button>
+                        <button class="btn btn-info" href={% static '' %}>Temporary Page</button>
                     </div>
                 </div>
             </div>
@@ -94,9 +88,9 @@
                          sed sagittis at, sagittis quis neque. Praesent.</p>
                          
                          <div class="row">
-                             <div class="btn btn-info animated bounceInUp">Sign in</div>
-                             <div class="btn btn-info animated bounceInUp"> Book an Appointment </div>
-                             <div class="btn btn-info animated bounceInUp">Sign up</div>
+                             <div class="btn btn-info animated bounceInUp"><a href="{{curl}}login/">Sign in</a></div>
+                             <div class="btn btn-info animated bounceInUp"> <a href="{{curl}}appointment/">Book an Appointment </a></div>
+                             <div class="btn btn-info animated bounceInUp"><a href="{{curl}}petientsignup/">Sign up</a></div>
                          </div>
                     </div>
                 </div>
@@ -110,7 +104,6 @@
                          sed sagittis at, sagittis quis neque. Praesent.</p>
                          
                          <div class="row vbh">
-                             
                              <div class="btn btn-info animated bounceInUp"> Book an Appointment </div>
                          </div>
                     </div>

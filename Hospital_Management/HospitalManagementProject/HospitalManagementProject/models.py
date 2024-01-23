@@ -134,3 +134,12 @@ class Opdappoientment(models.Model):
     
     def __str__(self):
          return "{0},{1}, {2}, {3}, {4}, {5}, {6}, {7}, {7}, {8}, {9}, {10},".format(self.Patientname, self.Patientguardian, self.Patientnumber, self.PatientDOB, self.Patientaddress, self.Patientsex,self.Patientsickness,self.Patientappointdoctor,self.PatientTNo,self.PatientDate,self.PatientDP)
+    
+
+class Equipements(models.Model):
+    Equipementname = models.CharField(max_length=100)
+    Equipementquantity = models.CharField(max_length=100)
+    Equipementprice = models.CharField(max_length=100)
+
+    def __str__(self):
+        return "{0},{1},{2}".format(self.Equipementname,self.Equipementquantity,self.Equipementprice)

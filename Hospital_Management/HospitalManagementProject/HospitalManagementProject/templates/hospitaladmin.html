@@ -57,11 +57,12 @@
                             <li style="padding-left:10px"><a href="{{curl}}employeesrc/">Employee profile</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}registration/">New registration</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}updateemployee/">Update</a></li>  
-                            <li style="padding-left:10px"><a>Equipements/Assets </a></li>
+                            <li style="padding-left:10px"><a href="{{curl}}equipements/">Equipements/Assets </a></li>
+                            <li style="padding-left:10px"><a href="{{curl}}accounts/">Account</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
-                        <button class="btn btn-info" href={% static '' %}>Main Page</button>
+                        <button class="btn btn-info" href={% static '' %}>Hospital Admin Page</button>
                     </div>
                 </div>
             </div>
@@ -90,9 +91,9 @@
                          sed sagittis at, sagittis quis neque. Praesent.</p>
                          
                          <div class="row">
-                             <div class="btn btn-info animated bounceInUp">Sign in</div>
-                             <div class="btn btn-info animated bounceInUp"> Book an Appointment </div>
-                             <div class="btn btn-info animated bounceInUp">Sign up</div>
+                             <div class="btn btn-info animated bounceInUp"><a href="{{curl}}login/">Sign in</a></div>
+                             <div class="btn btn-info animated bounceInUp"> <a href="{{curl}}appointment/">Book an Appointment </a></div>
+                             <div class="btn btn-info animated bounceInUp"><a href="{{curl}}petientsignup/">Sign up</a></div>
                          </div>
                     </div>
                 </div>

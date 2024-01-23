@@ -35,14 +35,12 @@
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item" style="">
                         <ul>
-                            <li style="padding-left:10px"><a href="{{curl}}hospitaladmin/">Home</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Employee Details</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Salary Calculate</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Generate salary Slip</a></li>
+                            <li style="padding-left:10px"><a href="{{curl}}accounts/">Home</a></li>
+                            
                         </ul>
                     </div>
                     <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
-                        <button class="btn btn-info" href={% static '' %}>Account Page</button>
+                        <button class="btn btn-info" href={% static '' %}>Employee Search</button>
                     </div>
                 </div>
             </div>
@@ -51,6 +49,29 @@
 
 {% endblock Header %}
 
+{% block Slider %}
+
+    <div class="row contact-rooo no-margin">
+        <div class="container" >
+           <div class="row">
+               <div style="padding-top:120px" class="col-sm-12">
+                    <h1 style="padding:0px 0px 30px 380px ">Search Employee Details</h1>
+
+                    <div style="margin-top:10px;" class="row">
+                        <div style="padding-top:10px; padding-left:340px;" class="col-sm-5"><label>Employee Id:</label></div>
+                        <div class="col-sm-4" style="padding-left:0px;"><input type="text" name="name" placeholder="Enter Employee Identity" class="form-control input-sm"  ></div>
+                    </div>
+                    <div style="margin-top:10px;" class="row">
+                        <div class="col-sm-10" style="padding-left:475px; padding-bottom:269px; padding-top:10px;">
+                        <button class="btn btn-danger btn-sm">Search</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+{% endblock Slider %}
 
 {% block KeyFeatures %}
 {% endblock KeyFeatures %}

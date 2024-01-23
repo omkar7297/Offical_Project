@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.conf import settings
-from .models import Empregistration, Salaryprocess, Patientsignup,Admissionform, Opdappoientment
+from .models import Empregistration,Salaryprocess, Patientsignup,Admissionform, Opdappoientment
 
 
 curl = settings.CURRENT_URL
@@ -28,7 +28,7 @@ def Contact(request):
 def Login(request):
     return render(request, "login.html", {"curl":curl})
 
-def Account(request):
+def Accounts(request):
     return render(request, "accounts.html", {"curl":curl})
 
 def Employeesrc(request):
@@ -56,7 +56,36 @@ def Temporary(request):
     return render(request,"temporary.html",{"curl": curl})
 
 def Registration(request):
+    if request.method == "POST":
+        newfname = request.POST["EmpFirstname"]
+        newlname = request.POST["Emplastname"]
+        newempid = request.POST["Employeeid"]
+
+        userObj=Empregistration(EmpFirstname=newfname)
+
+        print(newfname)
     return render(request,"registration.html",{"curl":curl})
 
 def Updateemployee(request):
-    return render(request, "updateemployee.html",{'curl':curl})
+    return render(request,"updateemployee.html",{'curl':curl})
+
+def Petientsignup(request):
+    return render(request,"petientsignup.html",{'curl':curl})
+
+def ipdpatienprescription(request):
+    return render(request,"ipdpatienprescription.html", {'curl':curl}) 
+
+def Ipdprescriptiondetails(request):
+    return render(request, "ipdprescriptiondetails.html",{'curl':curl})
+
+def Opdpatienprescription(request):
+    return render(request,"opdpatienprescription.html",{'curl':curl})
+
+def Opdprescriptiondetails(request):
+    return render(request,"opdprescriptiondetails.html",{'curl':curl})
+
+def Salarysrc(request):
+    return render(request,"salarysrc.html", {'curl':curl})
+
+def Equipements(request):
+    return render(request,"equipements.html",{'curl':curl})

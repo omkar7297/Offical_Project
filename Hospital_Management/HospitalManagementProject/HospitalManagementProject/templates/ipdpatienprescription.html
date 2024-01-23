@@ -35,14 +35,11 @@
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item" style="">
                         <ul>
-                            <li style="padding-left:10px"><a href="{{curl}}hospitaladmin/">Home</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Employee Details</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Salary Calculate</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}salarysrc/">Generate salary Slip</a></li>
-                        </ul>
+                            <li style="padding-left:10px"><a href="{{curl}}reception/">Home</a></li>
+                           </ul>
                     </div>
                     <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
-                        <button class="btn btn-info" href={% static '' %}>Account Page</button>
+                        <button class="btn btn-info" href={% static '' %}>Employee Search</button>
                     </div>
                 </div>
             </div>
@@ -51,6 +48,36 @@
 
 {% endblock Header %}
 
+{% block Slider %}
+
+    <div class="row contact-rooo no-margin"  >
+        <div class="container" >
+           <div class="row">
+               <div style="padding-top:120px" class="col-sm-7">
+                    <h1 style="padding:0px 0px 30px 75px ">Patient search Form </h1>
+                    <div class="row">
+                        <div style="padding-top:10px;" class="col-sm-3"><label>Patient ID :</label></div>
+                        <div class="col-sm-8"><input type="text" placeholder="Enter Name" name="name" class="form-control input-sm"  ></div>
+                    </div>
+                    <div style="margin-top:10px;" class="row">
+                        <div style="padding-top:10px;" class="col-sm-3"><label>Date</label></div>
+                        <div class="col-sm-8"><input type="date" name="name" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
+                    </div>
+            
+
+
+                    <div style="margin-top:10px;" class="row">
+                        <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
+                        <div class="col-sm-8">
+                        <button class="btn btn-danger btn-sm"><a href="{{curl}}ipdprescriptiondetails/">Search</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+
+{% endblock Slider %}
 
 {% block KeyFeatures %}
 {% endblock KeyFeatures %}

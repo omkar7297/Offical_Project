@@ -34,12 +34,13 @@
                     </div>
                     <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
                         <ul>
-                            <li style="padding-left:10px"><a href="{{curl}}hospitaladmin/">Home</a></li>    
-                            <li><a href="{{curl}}hospitaladmin/"><< Previous Page</a></li>
+                            <li style="padding-left:10px"><a href="{{curl}}hospitaladmin/">Home</a></li> 
                         </ul>
                     </div>
                     <div  class="row contact-rooo no-margin">
                         <div class="container">
+                        <form method="post" action="" novalidate>
+                            {% csrf_token %}
                             <div class="row">
                                 <div style="padding:0%; margin:0%; font-size:20px;color:black; " class="col-sm-20;">
                                     <h2 style="font-size:30px; color:#444; margin-bottom:60px; padding-left:430px"><marque>Registration Form</marque></h2>
@@ -105,11 +106,12 @@
                                     <div style="margin-top:1px;margin-left:25%;" class="row">
                                         <div style="padding-top:1px;" class="col-sm-3"><label></label></div>
                                         <div class="col-sm-6">
-                                            <button class="btn btn-danger btn-sm">Summit</button>
+                                            <button class="btn btn-danger btn-sm" type="submit">Submit</button>
                                             <button class="btn btn-danger btn-sm">Delete</button>
                                         </div>
                                     </div>
                             </div>
+                        </form>    
                         </div>
                 </div>
 
