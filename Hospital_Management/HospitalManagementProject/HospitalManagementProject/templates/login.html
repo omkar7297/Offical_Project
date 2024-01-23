@@ -2,7 +2,9 @@
 {% load static %}
 
 {% block Slider %}
-
+{{msg}}
+<form method="post" action=" " validate>
+    {% csrf_token %}
 <div style="padding-top:200px; margin-left:250px;" class="col-sm-6">
     <center>
         <h1 style="padding-bottom:50px; padding-left:70px;">Login Form</h1>

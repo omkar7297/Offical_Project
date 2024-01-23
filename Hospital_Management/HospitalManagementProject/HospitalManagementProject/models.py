@@ -5,8 +5,8 @@ from django.utils import timezone
 class Empregistration(models.Model):
     EmpFirstname = models.CharField(max_length=50)
     EmpLastname = models.CharField(max_length=50)
-    Employeeid = models.CharField(max_length=20,unique=True)
-    EmpEmail = models.CharField(max_length=100, unique=True)
+    EmpEmployeeid = models.CharField(max_length=20,unique=True)
+    EmpEmail = models.CharField(max_length=100,unique=True)
     EmpPassword = models.CharField(max_length=50) 
     EmpMobileno = models.CharField(max_length=100)
     EmpAdhar = models.CharField(max_length = 100,unique=True)
@@ -19,7 +19,8 @@ class Empregistration(models.Model):
     EmpROE = models.CharField(max_length=100)
     EmpDesignation = models.CharField(max_length = 100)
     EmpPhoto = models.CharField(max_length=1000000)
-    EmpDocuments = models.CharField(max_length=100)
+    EmpDocument = models.CharField(max_length=1000000)
+    EmpDesignation= models.CharField(max_length=100)
     EmpRletter = models.CharField(max_length=100)
     EmpAcadmic = models.CharField(max_length=100)
     EmpEletter = models.CharField(max_length=100)
@@ -60,7 +61,7 @@ class Patientsignup(models.Model):
     Password = models.CharField(max_length=100)
     Address = models.CharField(max_length=100)
     Gender = models.CharField(max_length=100)
-    DOB = models.DateField(max_length=100)
+    DOB = models.DateField()
     Date = models.DateTimeField('date published', default=timezone.now)
 
     def __srt__(self):

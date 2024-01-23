@@ -35,6 +35,35 @@ def Employeesrc(request):
     return render(request, "employeesrc.html", {"curl":curl})
 
 def Salary(request):
+    if request.method == "POST":
+        NWD= request.POST["NWD"]
+        PL= request.POST["PL"]
+        CL= request.POST["CL"]
+        Accountnumber= request.POST["Accountnumber"]
+        IFSC= request.POST["IFSC"]
+        Basicsalary = request.POST["Basicsalary"]
+        TD= request.POST["TD"]
+        PF= request.POST["PF"]
+        HRA= request.POST["HRA"]
+        Grosssaray = request.POST["Grosssaray"]
+        Netsalary = request.POST["Netsalary"]
+        Date = request.POST["Date"]
+
+        print(NWD,PL,CL,Accountnumber,IFSC,Basicsalary,TD,PF,HRA,Grosssaray ,Netsalary,Date)
+        # SalaryObj = Salaryprocess(NWD=NWD,PL=PL,CL=CL,Accountnumber=Accountnumber,IFSC=IFSC,Basicsalary=Basicsalary,TD=TD,HRA=HRA,
+        #                          Grosssaray=Grosssaray,Netsalary=Netsalary,Date=Date )
+
+        msg=""
+        try:
+            # PatientSignupObj.save()
+            msg="Salary Details Summited Successfully"
+        except:
+            msg="User Not Register"    
+        return render(request,"petientsignup.html",{'curl':curl})
+    else:
+        return render(request,"petientsignup.html",{'curl':curl})
+
+       
     return render(request, "salary.html", {"curl":curl})
 
 def Reception(request):
@@ -57,20 +86,70 @@ def Temporary(request):
 
 def Registration(request):
     if request.method == "POST":
-        newfname = request.POST["EmpFirstname"]
-        newlname = request.POST["Emplastname"]
-        newempid = request.POST["Employeeid"]
+        EmpFirstname = request.POST["EmpFirstname"]
+        EmpLastname = request.POST["EmpLastname"]
+        EmpEmployeeid = request.POST["EmpEmployeeid"]
+        EmpEmail = request.POST["EmpEmail"]
+        EmpPassword = request.POST["EmpPassword"]
+        EmpMobileno = request.POST["EmpMobileno"]
+        EmpAdhar = request.POST["EmpAdhar"]
+        EmpPAN = request.POST["EmpPAN"]
+        EmpUAN= request.POST["EmpUAN"]
+        EmpGender = request.POST["EmpGender"]
+        EmpDOB = request.POST["EmpDOB"]
+        EmpDOJ = request.POST["EmpDOJ"]
+        EmpTOE = request.POST["EmpTOE"]
+        EmpROE = request.POST["EmpROE"]
+        EmpDesignation = request.POST["EmpDesignation"]
+        EmpPhoto = request.POST["EmpPhoto"]
+        EmpDocument= request.POST["EmpDocument"]
+        EmpDocument = request.POST["EmpDocument"]
+        EmpRletter = request.POST["EmpRletter"]
+        EmpAcadmic = request.POST["EmpAcadmic"]
+        EmpEletter = request.POST["EmpEletter"]
+        EmpPhospital = request.POST["EmpPhospital"]
+        EmpCaddress = request.POST["EmpCaddress"]
+        EmpDate = request.POST["EmpDate"]
+        EmpStatus = request.POST["EmpStatus"]
+        CurrentTime = request.POST["CurrentTime"]
+        
+        print(EmpFirstname,EmpLastname,EmpEmployeeid,EmpEmail,EmpPassword,EmpMobileno,EmpAdhar,EmpPAN,EmpUAN,EmpGender,EmpDOB,
+              EmpDOJ,EmpTOE,EmpROE,EmpDesignation,EmpPhoto,EmpDocument,EmpRletter,EmpAcadmic,EmpEletter,EmpPhospital,
+              EmpCaddress,EmpDate,EmpStatus,CurrentTime)
+        
+        # RegObj = Empregistration (EmpFirstname=EmpFirstname,EmpLastname=EmpLastname,EmpEmployeeid=EmpEmployeeid,
+        # EmpEmail=EmpEmail,EmpPassword=EmpPassword,EmpMobileno=EmpMobileno,EmpAdhar=EmpAdhar,EmpPAN=EmpPAN,EmpUAN=EmpUAN,
+        # EmpGender=EmpGender,EEmpDOB=EmpDOB,EmpDOJ=EmpDOJ,EmpTOE=EmpTOE,EmpROE=EmpROE,EmpDesignation=EmpDesignation,
+        # EmpPhoto=EmpPhoto,EmpDocument=EmpDocument,EmpRletter=EmpRletter,EmpAcadmic=EmpAcadmic,EmpEletter=EmpEletter,
+        # EmpPhospital=EmpPhospital,EmpCaddress=EmpCaddress,EmpDate=EmpDate,EmpStatus=EmpStatus,CurrentTime=CurrentTime)
 
-        userObj=Empregistration(EmpFirstname=newfname)
-
-        print(newfname)
     return render(request,"registration.html",{"curl":curl})
 
 def Updateemployee(request):
     return render(request,"updateemployee.html",{'curl':curl})
 
 def Petientsignup(request):
-    return render(request,"petientsignup.html",{'curl':curl})
+    if request.method == "POST":
+        Name = request.POST["Name"]
+        Email = request.POST["Email"]
+        Number = request.POST["Number"]
+        Password = request.POST["Password"]
+        Address = request.POST["Address"]
+        Gender = request.POST["Gender"]
+        DOB  = request.POST["DOB"]
+        
+        # PatientSignupObj=Patientsignup(Name=Name,Email=Email,Number=Number,password=Password,Address=Address,Gender=Gender,DOB=DOB)
+        msg=""
+        try:
+            print(Name,Email,Number,Password,Address,Gender,DOB)
+            # PatientSignupObj.save()
+            msg="User Register Successfully"
+        except:
+            msg="User Not Register"    
+        return render(request,"petientsignup.html",{'curl':curl})
+    else:
+        return render(request,"petientsignup.html",{'curl':curl})
+
 
 def ipdpatienprescription(request):
     return render(request,"ipdpatienprescription.html", {'curl':curl}) 
