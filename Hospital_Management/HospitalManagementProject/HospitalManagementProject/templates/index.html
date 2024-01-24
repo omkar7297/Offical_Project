@@ -58,17 +58,17 @@
                             <li style="padding-left:10px"><a href="{{curl}}blog/">Blog</a></li>  
                             <li style="padding-left:10px"><a href="{{curl}}gallary/">Gallary</a></li>
                             <li style="padding-left:10px"><a href="{{curl}}contact/">Contact Us</a></li>
-                            <li style="padding-left:10px"><a href="{{curl}}temporary/">Temporary</a></li>
+                            {% comment %} <li style="padding-left:10px"><a href="{{curl}}temporary/">Temporary</a></li> {% endcomment %}
                             </ul>
                     </div>
                     <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
-                        <button class="btn btn-info" href={% static '' %}>Main Page</button>
+                        <button class="btn btn-info" href={% static '' %}>Home Page </button>
                     </div>
                 </div>
             </div>
         </div>
     </header>
-    {% endblock Header%}
+    {% endblock Header %}
     
     {% block Slider %}
      <!-- ################# Slider Starts Here#######################-->
@@ -398,13 +398,13 @@ But you can read the following facts in order to make sure of all pluses of our 
     {% endblock %}
     
     </body>
-
-<script src="assets/js/jquery-3.2.1.min.js"></script>
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/plugins/scroll-fixed/jquery-scrolltofixed-min.js"></script>
-<script src="assets/plugins/slider/js/owl.carousel.min.js"></script>
-<script src="assets/js/script.js"></script>
+ '}
+<script src="{% static 'js/jquery-3.2.1.min.js'%}"></script>
+<script src="{% static 'js/popper.min.js '%}" ></script>
+<script src="{% static 'js/bootstrap.min.js '%}"></script>
+<script src="{% static 'plugins/scroll-fixed/jquery-scrolltofixed-min.js'%}"></script>
+<script src="{% static 'plugins/slider/js/owl.carousel.min.js'%}"></script>
+<script src="{% static 'js/script.js'%}"></script>
 
 
 </html>

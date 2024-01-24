@@ -1,6 +1,53 @@
 {% extends 'index.html' %}
 {% load static %}
 
+{% block Header %}
+<!-- ################# Header Starts Here#######################-->
+<header>
+    <div class="header-top" >    
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-md-12 left-item">
+                    <ul>
+                        <li><i class="fas fa-envelope-square"></i> admin@Hospitalmanagement.com</li>
+                        <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
+                    </ul>
+                </div>
+                <div class="col-lg-5 d-none d-lg-block right-item">
+                    <ul>
+                        <li><a><i class="fab fa-github"></i></a></li>
+                        <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                        <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                        <li><a><i class="fab fa-twitter"></i></a></li>
+                        <li> <a><i class="fab fa-facebook-f"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="nav-head" class="header-nav">  
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                    <img src={% static 'images/logo.png' %} alt="">
+                   <a data-toggle="collapse" data-target="#menu" href="#men u" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                </div>
+                <div id="menu" class="col-lg-8   col-md-9 d-none d-md-block nav-item" style="padding: 0px; margin:0px">
+                    <ul>
+                        <li style="padding-left:10px"><a href="{{curl}}">Home</a></li>
+                        </ul>
+                </div>
+                <div class="col-sm-1 d-none d-lg-block appoint" style="padding-left:0px;">    
+                    <button class="btn btn-info" > Login Page  </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% endblock Header %}
 {% block Slider %}
 {{msg}}
 <form method="post" action=" " validate>
@@ -10,7 +57,7 @@
         <h1 style="padding-bottom:50px; padding-left:70px;">Login Form</h1>
         <div style="margin-top:10px; padding-left:19px;" class="row">
             <div style="padding-top:5px; " class="col-sm-3"><label>Email Address :</label></div>
-            <div class="col-sm-8"><input type="text" name="name" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
+            <div class="col-sm-8"><input type="text" name="email" placeholder="Enter Email Address" class="form-control input-sm"  ></div>
         </div>
         <div class="row">
             <div style="padding-top:5px;" class="col-sm-3"><label>Password :</label></div> 
@@ -19,12 +66,12 @@
         <div style="margin-top:10px; padding-bottom:100%;" class="row">
             <div style="padding-top:10px;" class="col-sm-3"><label></label></div>
             <div class="col-sm-8">
-            <button type="submit" class="btn btn-danger btn-sm"><a> Sign in </a></button>
+            <button type="submit" class="btn btn-danger btn-sm"><a href="{{curl}}"> Sign in </a></button>
             </div>
         </div>
     </center>
 </div>  
-
+</form>
 {% endblock Slider %}
 
 {% block KeyFeatures %}

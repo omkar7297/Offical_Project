@@ -37,7 +37,11 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'HospitalManagementProject'
+    'HospitalManagementProject',
+    'hospitalapp',
+    'doctorapp',
+    'Accountapp',
+    'receptionapp'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +86,18 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'HospitalManagement',
+#         'USER':'admin',
+#         'PASSWORD':'password',
+#         'HOST':'localhost',
+#         'PORT':3306
+#     }
+# }
+
+
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
@@ -106,9 +122,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+#TIME_ZONE = 'UTC'
+
+TIME_ZONE = 'Asia/Kolkata'
 
 USE_I18N = True
+
+USE_L10N = True
 
 USE_TZ = True
 

@@ -1,0 +1,176 @@
+{% extends "index.html"%}
+{% load static %}
+{% block Header %}
+      <!-- ################# Header Starts Here#######################-->
+      <header>
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7 col-md-12 left-item">
+                        <ul>
+                            <li><i class="fas fa-envelope-square"></i> sales@smarteyeapps.com</li>
+                            <li><i class="fas fa-phone-square"></i> +123 987 887 765</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block right-item">
+                        <ul>
+                            <li><a><i class="fab fa-github"></i></a></li>
+                            <li><a><i class="fab fa-google-plus-g"></i></a></li>
+                            <li> <a><i class="fab fa-pinterest-p"></i></a></li>
+                            <li><a><i class="fab fa-twitter"></i></a></li>
+                            <li> <a><i class="fab fa-facebook-f"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="nav-head" class="header-nav">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-3 no-padding col-sm-12 nav-img">
+                        <img src="{% static 'images/logo.png' %}" alt="">
+                       <a data-toggle="collapse" data-target="#menu" href="#menu" ><i class="fas d-block d-md-none small-menu fa-bars"></i></a>
+                    </div>
+                    <div id="menu" class="col-lg-8 col-md-9 d-none d-md-block nav-item">
+                        <ul>
+                            <li style="padding-left:10px"><a href="{{curl}}hospitalapp/hospitaladministrator">Home</a></li> 
+                        </ul>
+                    </div>
+                    <div  class="row contact-rooo no-margin">
+                        <div class="container">
+                        <form method="post" action="" novalidate>
+                            {% csrf_token %}
+                            <div class="row">
+                                <div style="padding:0%; margin:0%; font-size:20px;color:black; " class="col-sm-20;">
+                                    <h2 style="font-size:30px; color:#444; margin-bottom:60px; padding-left:430px"><marque>Registration Form</marque></h2>
+                                    <div style="margin-left:0%;" class="row">
+                                    <div style="padding-top:1px" class="col-sm-2"><label>First Name :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="First Name" name="EmpFirstname" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Last Name :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Last Name" name="EmpLastname" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Employees ID :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Employee ID < emp 0102 >" name="EmpEmployeeid" class="form-control input-sm"  ></div>
+                                
+                                    <div style="padding-top:1px" class="col-sm-2"><label>Email Address :</label></div>
+                                    <div class="col-sm-4"><input type="Email" placeholder="Email@email.com" name="EmpEmail" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Password :</label></div>
+                                    <div class="col-sm-4"><input type="Password" placeholder="Password0000@#$" name="EmpPassword" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Mobile No :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="+91 00000 99999" name="EmpMobileno" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:1px" class="col-sm-2"><label>Adhar No. :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="0000 1111 2222 3333" name="EmpAdhar" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>PAN Card :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="ABCDE1234M" name="EmpPAN" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>UAN No :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="10101010101" name="EmpUAN" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:1px" class="col-sm-2"><label>Gender :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Male/Female/Other" name="EmpGender" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>DOB:</label></div>
+                                    <div class="col-sm-4"><input type="date" placeholder="DD/MM/YYYY" name="EmpDOB" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Date Of Join :</label></div>
+                                    <div class="col-sm-4"><input type="date" placeholder="DD/MM/YYYY" name="EmpDOJ" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:1px" class="col-sm-2"><label>Types of Emp :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Full/Part/Visitor Emp" name="EmpTOE" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Role of Emp :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Admin/Employee/User" name="EmpROE" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Designation :</label></div>
+                                    <div class="col-sm-4"><input type="text" placeholder="Post / Position" name="EmpDesignation" class="form-control input-sm"  ></div>
+                                    
+
+                                    <div style="padding-top:10px;" class="col-sm-2"><label>Photo :</label></div>
+                                    <div class="col-sm-4"><input type="file" name="EmpPhoto" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:10px;" class="col-sm-2"><label>Documents :</label></div>
+                                    <div class="col-sm-4"><input type="file" multiple="" name="EmpDocument" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Reliving Letter :</label></div>
+                                    <div class="col-sm-4"><input type="file" multiple="" name="EmpRletter" placeholder="ABC Hospital" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Acadmic Record :</label></div>
+                                    <div class="col-sm-4"><input type="file" multiple="" name="EmpAcadmic"  class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-3"><label>Experience Letter:</label></div>
+                                    <div class="col-sm-3"><input type="file" multiple="" name="EmpEletter" placeholder="ABC Hospital" class="form-control input-sm"  ></div>
+                                    
+                                    <div style="padding-top:1px;" class="col-sm-3"><label>Previous hospital Name :</label></div>
+                                    <div class="col-sm-3"><input type="text" name="EmpPhospital" placeholder="ABC Hospital" class="form-control input-sm"  ></div>
+                                    <div style="padding-top:1px;" class="col-sm-2"><label>Current Address :</label></div>
+                                    <div class="col-sm-4"><input type="textarea" name="EmpCaddress" placeholder="Current Address" class="form-control input-sm"  ></div>
+                                    
+                                    </div>
+                               
+                               
+                                    
+                                    <div style="margin-top:1px;margin-left:25%;" class="row">
+                                        <div style="padding-top:1px;" class="col-sm-3"><label></label></div>
+                                        <div class="col-sm-6">
+                                            <button class="btn btn-danger btn-sm" type="submit">Submit</button>
+                                            <button class="btn btn-danger btn-sm">Delete</button>
+                                        </div>
+                                    </div>
+                            </div>
+                        </form>    
+                        </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+{% endblock Header %}
+{% block Slider %}
+<div class="slider-detail">
+
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="{% static 'images/slider/slider_1.jpg' %}" alt="First slide">
+                <div class="carousel-caption fvgb d-none d-md-block">
+                </div>
+            </div>
+            
+            <div class="carousel-item ">
+                <img class="d-block w-100" src="{% static 'images/slider/slider_3.jpg' %}" alt="Third slide">
+                 <div class="carousel-caption vdg-cur d-none d-md-block">
+                    <h5 class="animated bounceInDown">Best Free Clinic Template</h5>
+                    <p class="animated bounceInLeft">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam justo neque,  <br>
+                    aliquet sit amet elementum vel, vehicula eget eros. Vivamus arcu metus, mattis <br>
+                     sed sagittis at, sagittis quis neque. Praesent.</p>
+                     
+                     <div class="row vbh">
+                         
+                         <div class="btn btn-info animated bounceInUp"> Book an Appointment </div>
+                     </div>
+                </div>
+            </div>
+            
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+{% endblock Slider %}
+{% block WithMedical %}
+{% endblock WithMedical %}
+{% block ClinicNumber %}
+{% endblock ClinicNumber %}
+{% block Blog %}
+{% endblock Blog %}
+{% block OurTeam  %}
+{% endblock OurTeam %}
+{% block Footer %}
+{% endblock Footer %}
