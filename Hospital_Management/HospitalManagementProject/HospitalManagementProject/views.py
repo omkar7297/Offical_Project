@@ -140,7 +140,7 @@ def Login(request):
 # def Updateemployee(request):
 #     return render(request,"updateemployee.html",{'curl':curl})
 
-def Publicsignup(request):
+def PublicSignup(request):
     msg=""
     if request.method == "POST":
         Name = request.POST["Name"]

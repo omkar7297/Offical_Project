@@ -32,7 +32,7 @@ urlpatterns = [
     path('contact/',views.Contact),
     path('login/',views.Login),
     path('appointment/',views.Appointment),
-    path('publicsignup/',views.Publicsignup),
+    path('publicsignup/',views.PublicSignup),
 
 
 #--------------------------------------- Hospital Adminsistrator App ----------------------------------------------------
